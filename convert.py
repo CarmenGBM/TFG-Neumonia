@@ -5,7 +5,7 @@ import numpy as np
 import ntpath
 
 
-
+# Read all the DCM files in the folder
 lstFilesDCM=glob.glob("*.dcm")
 
 
