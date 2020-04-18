@@ -11,7 +11,7 @@ folder_path = "home/ubuntu/NASH/dataset/examples_dicom/"
 os.mkdir("home/ubuntu/NASH/dataset/examples_dicom/jpg_pictures/")
 #Specify the output jpg/png folder path
 jpg_folder_path = "home/ubuntu/NASH/dataset/examples_dicom/jpg_pictures/"
-#For each imaage in the folder path
+#For each image in the folder path
 for n, image in enumerate(images_path):
     #Read each dicom file
     ds = dicom.dcmread(os.path.join(folder_path, image))
@@ -21,8 +21,8 @@ for n, image in enumerate(images_path):
     if JPG == True:
         #Change format from dicom to JPG
         image = image.replace('.dcm', '.jpg')
-    #If we want a PNG format inseatd of JPG, so JPG is been set as False
-    else
+    #If we want a PNG format instead of JPG, so JPG is been set as False
+    else:
         image = image.replace('.dcm', '.png')
     #Save the new image in the output folder
     plt.imsave(os.path.join(jpg_folder_path, image), ds.pixel_array, cmap=plt.cm.gray)
