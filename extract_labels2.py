@@ -10,10 +10,12 @@ df=pd.read_csv("stage_2_train_labels.csv")
 negative=0
 #Counter for positive diagnosis in pneumonia
 positive=0
+#Counters for positives and negatives in training and test data sets.
 positive_train=0
 positive_test=0
 negative_train=0
 negative_test=0
+#Paths for txt files
 test_neumonia = open("/home/ubuntu/NASH/dataset/training_data/test_neumonia.txt","w")
 train_neumonia = open("/home/ubuntu/NASH/dataset/training_data/train_neumonia.txt","w")
 
